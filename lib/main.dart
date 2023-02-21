@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/latihan1.dart';
+import 'dart:async';
+import 'dart:io';
 import 'container_widget.dart';
 import 'package:flutter_application_1/column_widget.dart';
 import 'package:flutter_application_1/row_widget.dart';
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
             centerTitle: true,
             title: Text('Latihan'),
           ),
-          body: Column(
+          body: ListView(
             children: [
               Padding(
                 padding: EdgeInsets.only(top: 20),
