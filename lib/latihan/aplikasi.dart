@@ -20,11 +20,12 @@ class AplikasiWidget extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.network(
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundImage: NetworkImage(
                         img[index],
-                        height: 120,
-                        width: 120,
                       ),
+                    ),
                     Text("Kamu A")
                   ],
                 ),
