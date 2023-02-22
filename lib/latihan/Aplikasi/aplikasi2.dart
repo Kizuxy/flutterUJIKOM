@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AplikasiWidget extends StatelessWidget {
-  AplikasiWidget({super.key});
+class Aplikasi2Widget extends StatelessWidget {
+  Aplikasi2Widget({super.key});
 
   final List img = [
     'https://picsum.photos/200/300',
@@ -18,15 +18,19 @@ class AplikasiWidget extends StatelessWidget {
             return Column(
               children: [
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    CircleAvatar(
-                      radius: 50,
-                      backgroundImage: NetworkImage(
-                        img[index],
+                    Card(
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Image(image: NetworkImage(img[index])),
+                              Text('Kamu Bagus')
+                            ],
+                          )
+                        ],
                       ),
-                    ),
-                    Text("Kamu A")
+                    )
                   ],
                 ),
               ],

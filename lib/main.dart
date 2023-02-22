@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutterUJIKOM/latihan/aplikasi.dart';
+import 'package:flutterUJIKOM/latihan/Aplikasi/aplikasi.dart';
+import 'package:flutterUJIKOM/latihan/Aplikasi/aplikasi1.dart';
+import 'package:flutterUJIKOM/latihan/Aplikasi/aplikasi2.dart';
 import 'package:flutterUJIKOM/latihan/latihan1.dart';
 import 'package:flutterUJIKOM/latihan/latihan2.dart';
 import 'package:flutterUJIKOM/list_view/list_view_builder.dart';
@@ -21,31 +23,39 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: "Latihan",
+        debugShowCheckedModeBanner: false,
         home: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.red,
+            backgroundColor: Colors.black12,
             centerTitle: true,
-            title: const Text('Latihan'),
+            title: Text('Instaber'),
           ),
-          body: ListView(
-            // ignore: prefer_const_literals_to_create_immutables
-            children: [
-              const Padding(
-                padding: EdgeInsets.only(top: 20),
+          body: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Color.fromARGB(255, 0, 0, 0), Color.fromARGB(255, 0, 0, 0)],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                ),
               ),
-              AplikasiWidget(),
-              // ListProduct(),
-              // ListViewWidget(),
-              // ListViewBuilderWidget(),
-              // const Latihan1Widget(),
-              // RowWidget(),
-              // Padding(
-              //   padding: EdgeInsets.only(top: 10),
-              // ),
-              // ColumnWidget(),
-              // ContainerWidget(),
-            ],
-          ),
+              child: ListView(
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  AplikasiWidget(),
+                  Aplikasi1Widget(),
+                  // Aplikasi2Widget(),
+                  // ListProduct(),
+                  // ListViewWidget(),
+                  // ListViewBuilderWidget(),
+                  // const Latihan1Widget(),
+                  // RowWidget(),
+                  // Padding(
+                  //   padding: EdgeInsets.only(top: 10),
+                  // ),
+                  // ColumnWidget(),
+                  // ContainerWidget(),
+                ],
+              )),
         ));
   }
 }
