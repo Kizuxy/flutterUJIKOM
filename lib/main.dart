@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/latihan1.dart';
+import 'package:flutterUJIKOM/latihan/aplikasi.dart';
+import 'package:flutterUJIKOM/latihan/latihan1.dart';
+import 'package:flutterUJIKOM/latihan/latihan2.dart';
+import 'package:flutterUJIKOM/list_view/list_view_builder.dart';
 import 'dart:async';
 import 'dart:io';
 import 'container_widget.dart';
-import 'package:flutter_application_1/column_widget.dart';
-import 'package:flutter_application_1/row_widget.dart';
+import 'column_widget.dart';
+import 'package:flutterUJIKOM/row_widget.dart';
+import 'package:flutterUJIKOM/list_view/list_view.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -21,14 +25,19 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: Colors.red,
             centerTitle: true,
-            title: Text('Latihan'),
+            title: const Text('Latihan'),
           ),
           body: ListView(
+            // ignore: prefer_const_literals_to_create_immutables
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 20),
               ),
-              Latihan1Widget(),
+              AplikasiWidget(),
+              // ListProduct(),
+              // ListViewWidget(),
+              // ListViewBuilderWidget(),
+              // const Latihan1Widget(),
               // RowWidget(),
               // Padding(
               //   padding: EdgeInsets.only(top: 10),
@@ -48,7 +57,7 @@ class WidgetPertama extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text(
         'Hallo Dunia',
         style: TextStyle(
