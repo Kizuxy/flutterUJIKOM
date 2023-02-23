@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: Colors.black12,
             centerTitle: true,
-            title: Text('Instaber'),
+            title: Text('My List Anime'),
           ),
           body: Container(
               decoration: BoxDecoration(
@@ -42,6 +42,10 @@ class MyApp extends StatelessWidget {
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   AplikasiWidget(),
+                  Container(
+                    margin: EdgeInsets.only(top:10, bottom: 10, left: 10),
+                    child: Text("Anime Fovorit", style: TextStyle(color: Colors.purpleAccent, fontSize: 20, fontWeight: FontWeight.bold,))
+                  ),
                   Aplikasi1Widget(),
                   // Aplikasi2Widget(),
                   // ListProduct(),

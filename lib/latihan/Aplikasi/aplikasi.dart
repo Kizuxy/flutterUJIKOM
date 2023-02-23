@@ -14,7 +14,7 @@ class AplikasiWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 125,
+      height: 100,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
@@ -26,7 +26,7 @@ class AplikasiWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(left: 100, bottom: 10),
+                        padding: EdgeInsets.only(left: 100, bottom: 10, top: 10),
                       ),
                       CircleAvatar(
                         radius: 30,
